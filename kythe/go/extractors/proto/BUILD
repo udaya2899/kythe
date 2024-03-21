@@ -26,10 +26,10 @@ extra_action(
         "$(location :extract_proto_kzip)",
         "--extra_action=$(EXTRA_ACTION_FILE)",
         "--output=$(output $(ACTION_ID).proto.kzip)",
-        "--rules=$(location //external:vnames_config)",
+        "--rules=$(location //third_party:vnames_config)",
         "--language=protobuf",
     ]),
-    data = ["//external:vnames_config"],
+    data = ["//third_party:vnames_config"],
     out_templates = ["$(ACTION_ID).proto.kzip"],
     tools = [":extract_proto_kzip"],
 )

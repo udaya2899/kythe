@@ -22,7 +22,7 @@ cc_library(
         "-layering_check",  # TODO: protocolbuffers/protobuf#10889
     ],
     deps = [
-        "//external:libmemcached",
+        "//third_party:libmemcached",
         "//kythe/cxx/common:json_proto",
         "//kythe/cxx/common:lib",
         "//kythe/cxx/common:sha256_hasher",
@@ -498,7 +498,7 @@ cc_library(
         ":marked_source",
         ":proto_library_support",
         ":vfs",
-        "//external:libmemcached",
+        "//third_party:libmemcached",
         "//kythe/cxx/common:json_proto",
         "//kythe/cxx/common:lib",
         "//kythe/cxx/common/indexing:output",
@@ -546,7 +546,7 @@ cc_binary(
         ":indexer_ast_hooks",
         ":lib",
         ":proto_library_support",
-        "//external:zlib",
+        "//third_party:zlib",
         "//kythe/cxx/common:init",
         "//kythe/cxx/common:lib",
         "//kythe/cxx/common:re2_flag",

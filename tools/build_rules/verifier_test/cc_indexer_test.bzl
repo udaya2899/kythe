@@ -368,7 +368,7 @@ cc_write_kzip = rule(
         ),
         "vnames_config": attr.label(
             doc = "vnames_config file to be used by the extractor.",
-            default = Label("//external:vnames_config"),
+            default = Label("//third_party:vnames_config"),
             allow_single_file = [".json"],
         ),
         "deps": attr.label_list(
@@ -516,7 +516,7 @@ _bazel_extract_kzip = rule(
             allow_files = True,
         ),
         "vnames_config": attr.label(
-            default = Label("//external:vnames_config"),
+            default = Label("//third_party:vnames_config"),
             allow_single_file = True,
         ),
     },

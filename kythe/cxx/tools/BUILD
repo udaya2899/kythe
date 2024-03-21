@@ -17,7 +17,7 @@ cc_binary(
         "-layering_check",  # TODO: protocolbuffers/protobuf#10889
     ],
     deps = [
-        "//external:zlib",
+        "//third_party:zlib",
         "//kythe/cxx/common:init",
         "//kythe/cxx/common:kzip_reader",
         "//kythe/cxx/common:lib",

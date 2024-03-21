@@ -68,3 +68,39 @@ alias(
     name = "gmock_main",
     actual = "@com_google_googletest//:gtest_main",
 )
+
+alias(
+    name = "vnames_config",
+    actual = "@io_kythe//kythe/data:vnames_config",
+)
+
+alias(
+    name = "libuuid",
+    actual = "@io_kythe//third_party:libuuid",
+)
+
+alias(
+    name = "libmemcached",
+    actual = "@org_libmemcached_libmemcached//:libmemcached",
+)
+
+alias(
+    name = "guava",  # required by @com_google_protobuf
+    actual = "@io_kythe//third_party/guava",
+)
+
+alias(
+    name = "gson",  # required by @com_google_protobuf
+    actual = "@maven//:com_google_code_gson_gson",
+)
+
+alias(
+    name = "zlib",  # required by @com_google_protobuf
+    actual = "@net_zlib//:zlib",
+)
+
+# This binding is needed for protobuf. See https://github.com/protocolbuffers/protobuf/pull/5811
+alias(
+    name = "error_prone_annotations",
+    actual = "@maven//:com_google_errorprone_error_prone_annotations",
+)

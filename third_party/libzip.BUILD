@@ -198,7 +198,7 @@ cc_library(
     ],
     includes = ["lib"],
     deps = [
-        "//external:zlib",
+        "//third_party:zlib",
     ],
 )
 

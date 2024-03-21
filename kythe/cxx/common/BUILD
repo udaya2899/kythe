@@ -153,7 +153,7 @@ cc_library(
     deps = [
         ":file_vname_generator",
         ":json_proto",
-        "//external:zlib",
+        "//third_party:zlib",
         "//kythe/cxx/common/schema:edges",
         "//kythe/proto:analysis_cc_proto",
         "//kythe/proto:metadata_cc_proto",
@@ -187,7 +187,7 @@ cc_library(
     deps = [
         ":json_proto",
         ":lib",
-        "//external:zlib",
+        "//third_party:zlib",
         "//kythe/proto:graph_cc_proto",
         "//kythe/proto:storage_cc_proto",
         "//kythe/proto:xref_cc_proto",
@@ -285,7 +285,7 @@ cc_library(
     deps = [
         ":json_proto",
         ":net_client",
-        "//external:zlib",
+        "//third_party:zlib",
         "//kythe/proto:common_cc_proto",
         "//kythe/proto:graph_cc_proto",
         "@com_google_absl//absl/flags:flag",

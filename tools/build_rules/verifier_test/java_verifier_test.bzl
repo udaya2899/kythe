@@ -115,7 +115,7 @@ java_extract_kzip = rule(
         ),
         "opts": attr.string_list(),
         "vnames_config": attr.label(
-            default = Label("//external:vnames_config"),
+            default = Label("//third_party:vnames_config"),
             allow_single_file = True,
         ),
         "deps": attr.label_list(

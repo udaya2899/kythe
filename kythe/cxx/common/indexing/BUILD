@@ -45,7 +45,7 @@ cc_library(
     visibility = [PUBLIC_VISIBILITY],
     deps = [
         ":output",
-        "//external:libmemcached",
+        "//third_party:libmemcached",
         "//kythe/cxx/common:sha256_hasher",
         "//kythe/proto:analysis_cc_proto",
         "//kythe/proto:common_cc_proto",

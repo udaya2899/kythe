@@ -123,7 +123,7 @@ extract_java_aspect = aspect(
             cfg = "exec",
         ),
         "_java_aspect_vnames_config": attr.label(
-            default = Label("//external:vnames_config"),
+            default = Label("//third_party:vnames_config"),
             allow_single_file = True,
         ),
         "_java_runtime": attr.label(

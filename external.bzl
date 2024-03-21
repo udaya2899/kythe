@@ -1771,43 +1771,6 @@ def _go_dependencies():
         patch_args = ["-p1"],
     )
 
-def _bindings():
-    native.bind(
-        name = "vnames_config",
-        actual = "@io_kythe//kythe/data:vnames_config",
-    )
-
-    native.bind(
-        name = "libuuid",
-        actual = "@io_kythe//third_party:libuuid",
-    )
-
-    native.bind(
-        name = "libmemcached",
-        actual = "@org_libmemcached_libmemcached//:libmemcached",
-    )
-
-    native.bind(
-        name = "guava",  # required by @com_google_protobuf
-        actual = "@io_kythe//third_party/guava",
-    )
-
-    native.bind(
-        name = "gson",  # required by @com_google_protobuf
-        actual = "@maven//:com_google_code_gson_gson",
-    )
-
-    native.bind(
-        name = "zlib",  # required by @com_google_protobuf
-        actual = "@net_zlib//:zlib",
-    )
-
-    # This binding is needed for protobuf. See https://github.com/protocolbuffers/protobuf/pull/5811
-    native.bind(
-        name = "error_prone_annotations",
-        actual = "@maven//:com_google_errorprone_error_prone_annotations",
-    )
-
 def kythe_dependencies():
     """Defines external repositories for Kythe dependencies.
 
@@ -1819,7 +1782,6 @@ def kythe_dependencies():
     _go_dependencies()
     _java_dependencies()
 
-    _bindings()
     _rule_dependencies()
     hedron_compile_commands_setup()
 
