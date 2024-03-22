@@ -38,6 +38,9 @@ filegroup(
     ],
 )
 
+exports_files([
+    "zlib.BUILD",
+])
 cc_library(
     name = "libuuid",
     srcs = ["empty.cc"],
@@ -72,11 +75,6 @@ alias(
 alias(
     name = "vnames_config",
     actual = "@io_kythe//kythe/data:vnames_config",
-)
-
-alias(
-    name = "libuuid",
-    actual = "@io_kythe//third_party:libuuid",
 )
 
 alias(
